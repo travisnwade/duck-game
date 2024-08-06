@@ -52,7 +52,7 @@ Once the project is running, you can interact with the duck that follows your mo
 - **Audio Elements**: For background music and sound effects.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. Clone it. Update it. Whatever you want to do.
 
 ---
 
