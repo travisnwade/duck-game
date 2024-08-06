@@ -121,31 +121,3 @@ function moveBird() {
 }
 
 setTimeout(moveBird, Math.random() * 5000 + 15000);
-
-// Dragging functionality for mobile devices
-let isDragging = false;
-
-cursorDuck.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    cursorDuck.style.position = 'absolute';
-    moveAt(e.touches[0].pageX, e.touches[0].pageY);
-
-    document.addEventListener('touchmove', onTouchMove);
-    document.addEventListener('touchend', onTouchEnd);
-});
-
-function onTouchMove(e) {
-    if (!isDragging) return;
-    moveAt(e.touches[0].pageX, e.touches[0].pageY);
-}
-
-function onTouchEnd() {
-    isDragging = false;
-    document.removeEventListener('touchmove', onTouchMove);
-    document.removeEventListener('touchend', onTouchEnd);
-}
-
-function moveAt(pageX, pageY) {
-    cursorDuck.style.left = `${pageX - cursorDuck.offsetWidth / 2}px`;
-    cursorDuck.style.top = `${pageY - cursorDuck.offsetHeight / 2}px`;
-}
