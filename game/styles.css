@@ -18,6 +18,12 @@ body, html {
 .counter {
     color: white;
     font-size: 48px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;    
 }
 
 .cursor-duck, .mini-duck {
