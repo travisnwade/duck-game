@@ -11,6 +11,7 @@ const popSound = document.getElementById('popSound');
 const bgMusic = document.getElementById('bgMusic');
 const bird = document.getElementById('bird');
 const birdSound = document.getElementById('birdSound');
+const chirpSound = new Audio('assets/chirp-chirp.mp3'); // Load the chirp sound
 let eggCount = 0;
 let mouseTimeout;
 let wanderingInterval;
@@ -149,3 +150,20 @@ function moveAt(pageX, pageY) {
     cursorDuck.style.left = `${pageX - cursorDuck.offsetWidth / 2}px`;
     cursorDuck.style.top = `${pageY - cursorDuck.offsetHeight / 2}px`;
 }
+
+// Detect collision between bird and mouse
+document.addEventListener('mousemove', () => {
+    const birdRect = bird.getBoundingClientRect();
+    const cursorDuckRect = cursorDuck.getBoundingClientRect();
+
+    if (
+        birdRect.left < cursorDuckRect.right &&
+        birdRect.right > cursorDuckRect.left &&
+        birdRect.top < cursorDuckRect.bottom &&
+        birdRect.bottom > cursorDuckRect.top
+    ) {
+        bird.style.display = 'none';
+        chirpSound.currentTime = 0;
+        chirpSound.play();
+    }
+});
