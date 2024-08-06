@@ -8,22 +8,16 @@ body, html {
     cursor: none;  /* Hide the default cursor */
 }
 
-.counter {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    color: white;
-    font-size: 40px;
-    font-family: 'Shadows Into Light', cursive;
-    z-index: 1000;
-    margin-bottom: 20px;
-}
-
 .counters {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.counter {
+    color: white;
+    font-size: 48px;
 }
 
 .cursor-duck, .mini-duck {
