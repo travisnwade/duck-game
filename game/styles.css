@@ -16,6 +16,7 @@ body, html {
     font-size: 40px;
     font-family: 'Shadows Into Light', cursive;
     z-index: 1000;
+    margin-bottom: 20px;
 }
 
 .cursor-duck, .mini-duck {
