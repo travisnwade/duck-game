@@ -19,6 +19,13 @@ body, html {
     margin-bottom: 20px;
 }
 
+.counters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .cursor-duck, .mini-duck {
     position: absolute;
     width: 50px;
