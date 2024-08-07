@@ -15,10 +15,18 @@ const birdSound = document.getElementById('birdSound');
 const chirpSound = new Audio('assets/chirp-chirp.mp3'); // Load the chirp sound
 const countersDiv = document.querySelector('.counters');
 const volumeControlDiv = document.querySelector('.volume-control');
+const infoIcon = document.getElementById('infoIcon');
+const modal = document.getElementById('modal');
+const closeIcon = document.getElementById('closeIcon');
 let eggCount = 0;
 let birdCount = 0;
 let mouseTimeout;
 let wanderingInterval;
+
+// Pause variables
+let isPaused = false;
+let wasPlayingBgMusic = false;
+let wasPlayingBirdSound = false;
 
 bgMusic.play();
 birdSound.volume = 0.5; // Set bird sound to 50%
