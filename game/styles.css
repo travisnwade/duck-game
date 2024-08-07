@@ -131,9 +131,10 @@ body, html {
 }
 
 .info-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+    /* width: 20px; */
+    /* height: 20px; */
+    /* margin-left: 10px; */
+    display: none; /* Hiding for now until it's more useful */
 }
 
 .github-icon {
