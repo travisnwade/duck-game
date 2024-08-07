@@ -66,6 +66,7 @@ body {
     margin-top: 20px;
     padding: 15px;
     background-color: #000;
+    opacity: 75%;
     border-radius: 10px;
     text-align: left;
 }
