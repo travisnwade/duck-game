@@ -37,6 +37,21 @@ document.addEventListener('mousemove', (e) => {
     clearTimeout(mouseTimeout);
     clearInterval(wanderingInterval);
     mouseTimeout = setTimeout(startWandering, 3000);
+
+    // Check if the cursor is within the volume control div
+    const volumeControlRect = volumeControlDiv.getBoundingClientRect();
+    if (
+        e.pageX >= volumeControlRect.left &&
+        e.pageX <= volumeControlRect.right &&
+        e.pageY >= volumeControlRect.top &&
+        e.pageY <= volumeControlRect.bottom
+    ) {
+        cursorDuck.style.display = 'none'; // Hide custom cursor
+        document.body.style.cursor = 'auto'; // Show default cursor
+    } else {
+        cursorDuck.style.display = 'block'; // Show custom cursor
+        document.body.style.cursor = 'none'; // Hide default cursor
+    }
 });
 
 function startWandering() {
