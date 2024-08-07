@@ -134,6 +134,7 @@ body, html {
 
 #volumeSlider::-webkit-slider-runnable-track {
     background: linear-gradient(to right, yellow 0%, yellow var(--volume), gray var(--volume), gray 100%);
+    border-radius: 5px;
 }
 
 #volumeSlider {
