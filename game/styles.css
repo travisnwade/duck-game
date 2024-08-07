@@ -152,10 +152,13 @@ body, html {
 }
 
 /* Hide things on mobile devices */
+
 @media (max-width: 768px) {
+    /*
     .mini-duck {
-        display: none; /* mini ducks */
+        display: none;
     }
+    */
     
     .github-icon {
         display: none; /* github icon */ 
