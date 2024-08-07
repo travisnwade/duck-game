@@ -98,7 +98,9 @@ function placeEgg() {
         const countersRect = countersDiv.getBoundingClientRect();
         const volumeControlRect = volumeControlDiv.getBoundingClientRect();
 
-        if (!isOverlapping(eggRect, countersRect) && !isOverlapping(eggRect, volumeControlRect)) {
+        if (!isOverlapping(eggRect, countersRect) && 
+            !isOverlapping(eggRect, volumeControlRect) && 
+            eggRect.bottom < volumeControlRect.top) {
             validPosition = true;
         }
     }
