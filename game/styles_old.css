@@ -8,14 +8,22 @@ body, html {
     cursor: none;  /* Hide the default cursor */
 }
 
+.counters {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 20px;
+}
+
 .counter {
-    position: absolute;
-    top: 40px;
+    color: white;
+    font-size: 48px;
+    position: relative;
+    top: 20px;
     left: 40px;
     color: white;
     font-size: 40px;
-    font-family: 'Shadows Into Light', cursive;
-    z-index: 1000;
+    font-family: 'Shadows Into Light', cursive;    
 }
 
 .cursor-duck, .mini-duck {
@@ -126,6 +134,7 @@ body, html {
 
 #volumeSlider::-webkit-slider-runnable-track {
     background: linear-gradient(to right, yellow 0%, yellow var(--volume), gray var(--volume), gray 100%);
+    border-radius: 5px;
 }
 
 #volumeSlider {
@@ -157,5 +166,9 @@ body, html {
 @media (max-width: 768px) {
     .mini-duck {
         display: none;
+    }
+
+    .bird {
+        width: 50px; /* Ensure the bird is smaller on mobile devices */
     }
 }
