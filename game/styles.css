@@ -15,12 +15,12 @@ body, html {
 }
 
 .counter {
-    color: white;
-    font-size: 48px;
+    color: #fff;
+    font-size: 35px;
     position: relative;
     top: 20px;
-    left: 40px;
-    font-family: 'Shadows Into Light', cursive;    
+    left: 32px;
+    font-family: 'Shadows Into Light', cursive;   
 }
 
 .cursor-duck, .mini-duck {
@@ -58,7 +58,7 @@ body, html {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-    filter: invert(81%) sepia(99%) saturate(963%) hue-rotate(357deg) brightness(104%) contrast(103%);
+    filter: brightness(0) saturate(100%) invert(84%) sepia(33%) saturate(1076%) hue-rotate(325deg) brightness(98%) contrast(106%);
 }
 
 #volumeSlider {
@@ -81,7 +81,7 @@ body, html {
     appearance: none;
     width: 20px;
     height: 20px;
-    background: yellow;
+    background: #FFB648;
     border-radius: 50%; /* Rounded thumb */
     margin-top: -6px;
     cursor: pointer;
@@ -97,7 +97,7 @@ body, html {
 #volumeSlider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: yellow;
+    background: #FFB648;
     border-radius: 50%; /* Rounded thumb */
     cursor: pointer;
 }
@@ -123,7 +123,7 @@ body, html {
 #volumeSlider::-ms-thumb {
     width: 20px;
     height: 20px;
-    background: yellow;
+    background: #FFB648;
     border-radius: 50%; /* Rounded thumb */
     cursor: pointer;
 }
