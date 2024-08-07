@@ -1,10 +1,14 @@
 body {
-    background-color: black;
+    background: url('assets/duck-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: 'Shadows Into Light', cursive;
+    overflow: hidden; /* Prevent scrolling when modal is open */
 }
 .container {
     display: flex;
