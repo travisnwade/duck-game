@@ -17,7 +17,7 @@ body, html {
 }
 
 .counter {
-    color: #000;
+    color: #333;
     font-size: 35px;
     position: relative;
     top: 10px;
