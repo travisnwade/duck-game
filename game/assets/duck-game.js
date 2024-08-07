@@ -82,16 +82,17 @@ function placeEgg() {
 
     let randomX, randomY;
     let validPosition = false;
+    const eggSize = 30; // Assuming the egg width and height are 30px
 
     while (!validPosition) {
-        randomX = Math.random() * window.innerWidth;
-        randomY = Math.random() * window.innerHeight;
+        randomX = Math.random() * (window.innerWidth - eggSize);
+        randomY = Math.random() * (window.innerHeight - eggSize);
 
         const eggRect = {
             left: randomX,
-            right: randomX + 30, // Assuming the egg width is 30px
+            right: randomX + eggSize,
             top: randomY,
-            bottom: randomY + 30 // Assuming the egg height is 30px
+            bottom: randomY + eggSize
         };
 
         const countersRect = countersDiv.getBoundingClientRect();
