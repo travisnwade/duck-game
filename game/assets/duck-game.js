@@ -88,10 +88,10 @@ function moveBird() {
     const windowHeight = window.innerHeight;
 
     // Ensure the bird starts within the visible area of the screen
-    const startPosition = Math.random() * (windowHeight / 2 - birdHeight);
+    const startPositionY = Math.random() * (windowHeight - birdHeight);
     const direction = Math.random() > 0.5 ? 'leftToRight' : 'rightToLeft';
 
-    bird.style.top = `${startPosition}px`;
+    bird.style.top = `${startPositionY}px`;
     bird.style.display = 'block';
 
     const duration = Math.random() * 5000 + 5000; // Random duration between 5 and 10 seconds
