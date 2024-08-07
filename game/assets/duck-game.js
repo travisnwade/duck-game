@@ -150,9 +150,9 @@ function moveBird() {
         bird.style.transform = 'scaleX(-1)'; // Ensure bird faces left
 
         bird.animate([
-            //{ left: `${window.innerWidth + 100}px` },
-            { left: `${window.innerWidth - 100}px` } // Prevent overflow
-            //{ left: '-100px' }
+            { left: `${window.innerWidth + 100}px` },
+            //{ left: `${window.innerWidth - 100}px` } // Prevent overflow
+            { left: '-100px' }
         ], {
             duration: duration,
             easing: 'linear',
