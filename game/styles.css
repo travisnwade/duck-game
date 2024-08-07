@@ -151,9 +151,13 @@ body, html {
     filter: brightness(0) saturate(100%) invert(73%) sepia(45%) saturate(377%) hue-rotate(153deg) brightness(95%) contrast(88%);
 }
 
-/* Hide mini ducks on mobile devices */
+/* Hide things on mobile devices */
 @media (max-width: 768px) {
     .mini-duck {
-        display: none;
+        display: none; /* mini ducks */
+    }
+    
+    .github-icon {
+        display: none; /* github icon */ 
     }
 }
