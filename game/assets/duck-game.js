@@ -133,7 +133,7 @@ function moveBird() {
 
         bird.animate([
             { left: '-100px' },
-            { left: `${window.innerWidth + 100}px` }
+            { left: `${window.innerWidth - 100}px` } // Prevent overflow
         ], {
             duration: duration,
             easing: 'linear',
