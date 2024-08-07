@@ -40,8 +40,8 @@ body, html {
 
 .egg {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background-image: url('/assets/egg.svg');
     background-size: cover;
 }
@@ -58,11 +58,7 @@ body, html {
     width: 30px;
     height: 30px;
     margin-right: 10px;
-<<<<<<< HEAD
-    filter: brightness(0) saturate(100%) invert(84%) sepia(33%) saturate(1076%) hue-rotate(325deg) brightness(98%) contrast(106%);
-=======
     filter: invert(81%) sepia(99%) saturate(963%) hue-rotate(357deg) brightness(104%) contrast(103%);
->>>>>>> 442552bc83a8118be80564742d2cdb807b40150e
 }
 
 #volumeSlider {
@@ -85,13 +81,8 @@ body, html {
     appearance: none;
     width: 20px;
     height: 20px;
-<<<<<<< HEAD
-    background: #FFB648;
-    border-radius: 50%;
-=======
     background: yellow;
     border-radius: 50%; /* Rounded thumb */
->>>>>>> 442552bc83a8118be80564742d2cdb807b40150e
     margin-top: -6px;
     cursor: pointer;
 }
@@ -106,13 +97,8 @@ body, html {
 #volumeSlider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-<<<<<<< HEAD
-    background: #FFB648;
-    border-radius: 50%;
-=======
     background: yellow;
     border-radius: 50%; /* Rounded thumb */
->>>>>>> 442552bc83a8118be80564742d2cdb807b40150e
     cursor: pointer;
 }
 
@@ -137,40 +123,11 @@ body, html {
 #volumeSlider::-ms-thumb {
     width: 20px;
     height: 20px;
-<<<<<<< HEAD
-    background: #FFB648;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#volumeSlider::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #FFB648 0%, #FFB648 var(--volume), gray var(--volume), gray 100%);
-}
-
-#volumeSlider {
-    --volume: 50%;
-}
-
-#volumeSlider::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #FFB648 0%, #FFB648 calc(var(--volume) * 100%), gray calc(var(--volume) * 100%), gray 100%);
-}
-
-#volumeSlider {
-    --volume: 50%;
-    background: linear-gradient(to right, #FFB648 0%, #FFB648 50%, gray 50%, gray 100%);
-}
-
-#volumeSlider::-webkit-slider-runnable-track {
-    background: linear-gradient(to right, #FFB648 0%, #FFB648 calc(var(--volume) * 100%), gray calc(var(--volume) * 100%), gray 100%);
-}
-
-=======
     background: yellow;
     border-radius: 50%; /* Rounded thumb */
     cursor: pointer;
 }
 
->>>>>>> 442552bc83a8118be80564742d2cdb807b40150e
 .bird {
     position: absolute;
     width: 80px;
