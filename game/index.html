@@ -62,10 +62,17 @@ We all deserve to be here. You are loved.
     <div class="volume-control">
         <img src="assets/speaker.svg" alt="Volume Icon" class="volume-icon">
         <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
-        <img src="assets/info.png" alt="Info Icon" class="info-icon">
+        <img src="assets/info.png" alt="Info Icon" class="info-icon" id="infoIcon">
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="assets/close.png" alt="Close" class="close-icon" id="closeIcon">
+            <h1>Information</h1>
+            <p>This is the information modal. You can put any content here.</p>
+        </div>
     </div>
     <img src="assets/bird.svg" alt="Bird" id="bird" class="bird">
     <script src="assets/bg-music-volume.js"></script>
-    <script src="assets/duck-game.js"></script>
+    <script src="duck-game.js"></script>
 </body>
 </html>

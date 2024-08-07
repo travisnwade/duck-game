@@ -214,3 +214,42 @@ document.addEventListener('mousemove', () => {
         chirpSound.play();
     }
 });
+
+// Modal functionality
+infoIcon.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    isPaused = true;
+    pauseGame();
+});
+
+closeIcon.addEventListener('click', () => {
+    modal.style.display = 'none';
+    isPaused = false;
+    resumeGame();
+});
+
+function pauseGame() {
+    if (!bgMusic.paused) {
+        wasPlayingBgMusic = true;
+        bgMusic.pause();
+    }
+    if (!birdSound.paused) {
+        wasPlayingBirdSound = true;
+        birdSound.pause();
+    }
+    clearInterval(wanderingInterval);
+    // Pause other game activities if necessary
+}
+
+function resumeGame() {
+    if (wasPlayingBgMusic) {
+        bgMusic.play();
+        wasPlayingBgMusic = false;
+    }
+    if (wasPlayingBirdSound) {
+        birdSound.play();
+        wasPlayingBirdSound = false;
+    }
+    startWandering();
+    // Resume other game activities if necessary
+}
