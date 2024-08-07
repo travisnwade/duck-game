@@ -15,18 +15,10 @@ const birdSound = document.getElementById('birdSound');
 const chirpSound = new Audio('assets/chirp-chirp.mp3'); // Load the chirp sound
 const countersDiv = document.querySelector('.counters');
 const volumeControlDiv = document.querySelector('.volume-control');
-const infoIcon = document.getElementById('infoIcon');
-const modal = document.getElementById('modal');
-const closeIcon = document.getElementById('closeIcon');
 let eggCount = 0;
 let birdCount = 0;
 let mouseTimeout;
 let wanderingInterval;
-
-// Pause variables
-let isPaused = false;
-let wasPlayingBgMusic = false;
-let wasPlayingBirdSound = false;
 
 bgMusic.play();
 birdSound.volume = 0.5; // Set bird sound to 50%
@@ -222,42 +214,3 @@ document.addEventListener('mousemove', () => {
         chirpSound.play();
     }
 });
-
-// Modal functionality
-infoIcon.addEventListener('click', () => {
-    modal.style.display = 'flex';
-    isPaused = true;
-    pauseGame();
-});
-
-closeIcon.addEventListener('click', () => {
-    modal.style.display = 'none';
-    isPaused = false;
-    resumeGame();
-});
-
-function pauseGame() {
-    if (!bgMusic.paused) {
-        wasPlayingBgMusic = true;
-        bgMusic.pause();
-    }
-    if (!birdSound.paused) {
-        wasPlayingBirdSound = true;
-        birdSound.pause();
-    }
-    clearInterval(wanderingInterval);
-    // Pause other game activities if necessary
-}
-
-function resumeGame() {
-    if (wasPlayingBgMusic) {
-        bgMusic.play();
-        wasPlayingBgMusic = false;
-    }
-    if (wasPlayingBirdSound) {
-        birdSound.play();
-        wasPlayingBirdSound = false;
-    }
-    startWandering();
-    // Resume other game activities if necessary
-}
