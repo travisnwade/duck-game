@@ -32,15 +32,15 @@ bgMusic.play();
 birdSound.volume = 0.5; // Set bird sound to 50%
 
 document.addEventListener('mousemove', (e) => {
-    cursorDuck.style.left = `${Math.min(window.innerWidth - cursorDuck.offsetWidth, Math.max(0, e.pageX - cursorDuck.offsetWidth / 2))}px`;
-    cursorDuck.style.top = `${Math.min(window.innerHeight - cursorDuck.offsetHeight, Math.max(0, e.pageY - cursorDuck.offsetHeight / 2))}px`;
+    cursorDuck.style.left = `${Math.min(window.innerWidth - cursorDuck.offsetWidth, Math.max(0, e.pageX - cursorDuck.offsetWidth / 5))}px`;
+    cursorDuck.style.top = `${Math.min(window.innerHeight - cursorDuck.offsetHeight, Math.max(0, e.pageY - cursorDuck.offsetHeight / 5))}px`;
 
     miniDucks.forEach((duck, index) => {
         setTimeout(() => {
             const duckLeft = e.pageX + (index + 1) * 60;
             const duckTop = e.pageY + (index + 1) * 60;
-            duck.style.left = `${Math.min(window.innerWidth - duck.offsetWidth, Math.max(0, duckLeft - duck.offsetWidth / 2))}px`;
-            duck.style.top = `${Math.min(window.innerHeight - duck.offsetHeight, Math.max(0, duckTop - duck.offsetHeight / 2))}px`;
+            duck.style.left = `${Math.min(window.innerWidth - duck.offsetWidth, Math.max(0, duckLeft - duck.offsetWidth / 5))}px`;
+            duck.style.top = `${Math.min(window.innerHeight - duck.offsetHeight, Math.max(0, duckTop - duck.offsetHeight / 5))}px`;
         }, index * 100);
     });
 
