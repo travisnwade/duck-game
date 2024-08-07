@@ -32,13 +32,15 @@ bgMusic.play();
 birdSound.volume = 0.5; // Set bird sound to 50%
 
 document.addEventListener('mousemove', (e) => {
-    cursorDuck.style.left = `${e.pageX}px`;
-    cursorDuck.style.top = `${e.pageY}px`;
+    cursorDuck.style.left = `${Math.min(window.innerWidth - cursorDuck.offsetWidth, Math.max(0, e.pageX - cursorDuck.offsetWidth / 2))}px`;
+    cursorDuck.style.top = `${Math.min(window.innerHeight - cursorDuck.offsetHeight, Math.max(0, e.pageY - cursorDuck.offsetHeight / 2))}px`;
 
     miniDucks.forEach((duck, index) => {
         setTimeout(() => {
-            duck.style.left = `${e.pageX + (index + 1) * 60}px`;
-            duck.style.top = `${e.pageY + (index + 1) * 60}px`;
+            const duckLeft = e.pageX + (index + 1) * 60;
+            const duckTop = e.pageY + (index + 1) * 60;
+            duck.style.left = `${Math.min(window.innerWidth - duck.offsetWidth, Math.max(0, duckLeft - duck.offsetWidth / 2))}px`;
+            duck.style.top = `${Math.min(window.innerHeight - duck.offsetHeight, Math.max(0, duckTop - duck.offsetHeight / 2))}px`;
         }, index * 100);
     });
 
@@ -69,8 +71,36 @@ function startWandering() {
             const randomY = Math.random() * 100 - 50;
             const currentX = parseFloat(duck.style.left);
             const currentY = parseFloat(duck.style.top);
-            duck.style.left = `${currentX + randomX}px`;
-            duck.style.top = `${currentY + randomY}px`;
+
+            let newX = currentX + randomX;
+            let newY = currentY + randomY;
+
+            if (newX < 0 || newX > window.innerWidth - duck.offsetWidth) {
+                newX = Math.min(window.innerWidth - duck.offsetWidth, Math.max(0, newX));
+                duck.animate([
+                    { transform: 'translateY(0)' },
+                    { transform: 'translateY(-10px)' },
+                    { transform: 'translateY(0)' }
+                ], {
+                    duration: 500,
+                    easing: 'ease-out'
+                });
+            }
+
+            if (newY < 0 || newY > window.innerHeight - duck.offsetHeight) {
+                newY = Math.min(window.innerHeight - duck.offsetHeight, Math.max(0, newY));
+                duck.animate([
+                    { transform: 'translateY(0)' },
+                    { transform: 'translateY(-10px)' },
+                    { transform: 'translateY(0)' }
+                ], {
+                    duration: 500,
+                    easing: 'ease-out'
+                });
+            }
+
+            duck.style.left = `${newX}px`;
+            duck.style.top = `${newY}px`;
         });
     }, 3000);
 }
@@ -203,8 +233,8 @@ function onTouchEnd() {
 }
 
 function moveAt(pageX, pageY) {
-    cursorDuck.style.left = `${pageX - cursorDuck.offsetWidth / 2}px`;
-    cursorDuck.style.top = `${pageY - cursorDuck.offsetHeight / 2}px`;
+    cursorDuck.style.left = `${Math.min(window.innerWidth - cursorDuck.offsetWidth, Math.max(0, pageX - cursorDuck.offsetWidth / 2))}px`;
+    cursorDuck.style.top = `${Math.min(window.innerHeight - cursorDuck.offsetHeight, Math.max(0, pageY - cursorDuck.offsetHeight / 2))}px`;
 }
 
 // Detect collision between bird and mouse
