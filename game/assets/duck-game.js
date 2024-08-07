@@ -214,3 +214,20 @@ document.addEventListener('mousemove', () => {
         chirpSound.play();
     }
 });
+
+// Add jump functionality on touch
+cursorDuck.addEventListener('touchstart', () => {
+    jumpDuck(cursorDuck);
+});
+
+function jumpDuck(element) {
+    const originalTop = element.style.top;
+    element.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-50px)' },
+        { transform: 'translateY(0)' }
+    ], {
+        duration: 500,
+        easing: 'ease-out'
+    });
+}
