@@ -6,12 +6,15 @@ const miniDucks = [
     document.getElementById('miniDuck4'),
     document.getElementById('miniDuck5')
 ];
-const counter = document.getElementById('counter');
+const eggCounter = document.getElementById('eggCounter');
+const birdCounter = document.getElementById('birdCounter');
 const popSound = document.getElementById('popSound');
 const bgMusic = document.getElementById('bgMusic');
 const bird = document.getElementById('bird');
 const birdSound = document.getElementById('birdSound');
+const chirpSound = new Audio('assets/chirp-chirp.mp3'); // Load the chirp sound
 let eggCount = 0;
+let birdCount = 0;
 let mouseTimeout;
 let wanderingInterval;
 
@@ -61,7 +64,7 @@ function placeEgg() {
     egg.addEventListener('mouseenter', () => {
         egg.remove();
         eggCount++;
-        counter.textContent = `Eggs: ${eggCount}`;
+        eggCounter.textContent = `Eggs: ${eggCount}`;
         popSound.currentTime = 0; // Rewind to the start
         popSound.play();
     });
@@ -149,3 +152,22 @@ function moveAt(pageX, pageY) {
     cursorDuck.style.left = `${pageX - cursorDuck.offsetWidth / 2}px`;
     cursorDuck.style.top = `${pageY - cursorDuck.offsetHeight / 2}px`;
 }
+
+// Detect collision between bird and mouse
+document.addEventListener('mousemove', () => {
+    const birdRect = bird.getBoundingClientRect();
+    const cursorDuckRect = cursorDuck.getBoundingClientRect();
+
+    if (
+        birdRect.left < cursorDuckRect.right &&
+        birdRect.right > cursorDuckRect.left &&
+        birdRect.top < cursorDuckRect.bottom &&
+        birdRect.bottom > cursorDuckRect.top
+    ) {
+        bird.style.display = 'none';
+        birdCount++;
+        birdCounter.textContent = `Birds: ${birdCount}`;
+        chirpSound.currentTime = 0;
+        chirpSound.play();
+    }
+});

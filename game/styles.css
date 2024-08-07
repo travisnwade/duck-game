@@ -166,4 +166,8 @@ body, html {
     .mini-duck {
         display: none;
     }
+
+    .bird {
+        width: 50px; /* Ensure the bird is smaller on mobile devices */
+    }
 }

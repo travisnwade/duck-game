@@ -76,7 +76,13 @@ setTimeout(placeEgg, Math.random() * 12000 + 3000);
 startWandering();
 
 function moveBird() {
-    const startPosition = Math.random() * window.innerHeight / 2;
+    const birdWidth = bird.offsetWidth;
+    const birdHeight = bird.offsetHeight;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Ensure the bird starts within the visible area of the screen
+    const startPosition = Math.random() * (windowHeight / 2 - birdHeight);
     const direction = Math.random() > 0.5 ? 'leftToRight' : 'rightToLeft';
 
     bird.style.top = `${startPosition}px`;
@@ -85,12 +91,12 @@ function moveBird() {
     const duration = Math.random() * 5000 + 5000; // Random duration between 5 and 10 seconds
 
     if (direction === 'leftToRight') {
-        bird.style.left = '-100px';
+        bird.style.left = `-${birdWidth}px`;
         bird.style.transform = 'scaleX(1)'; // Ensure bird faces right
 
         bird.animate([
-            { left: '-100px' },
-            { left: `${window.innerWidth + 100}px` }
+            { left: `-${birdWidth}px` },
+            { left: `${windowWidth + birdWidth}px` }
         ], {
             duration: duration,
             easing: 'linear',
@@ -103,12 +109,12 @@ function moveBird() {
             setTimeout(moveBird, Math.random() * 5000 + 15000); // Schedule next flight
         }, duration);
     } else {
-        bird.style.left = `${window.innerWidth + 100}px`;
+        bird.style.left = `${windowWidth + birdWidth}px`;
         bird.style.transform = 'scaleX(-1)'; // Ensure bird faces left
 
         bird.animate([
-            { left: `${window.innerWidth + 100}px` },
-            { left: '-100px' }
+            { left: `${windowWidth + birdWidth}px` },
+            { left: `-${birdWidth}px` }
         ], {
             duration: duration,
             easing: 'linear',
