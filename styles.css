@@ -35,7 +35,7 @@ body {
 }
 
 .button {
-    background-color: yellow; /* Yellow */
+    background-color: #FFB648;; /* Yellow */
     border: none;
     color: black;
     padding: 15px 32px;
@@ -52,14 +52,16 @@ body {
 }
 
 .button:hover {
-    background-color: #d1d100;
+    background-color: #c27c13;
 }
 
 .instructions {
-    max-width: 300px;
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+    max-width: 380px;
     margin-top: 20px;
     padding: 15px;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     text-align: left;
 }
