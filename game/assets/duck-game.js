@@ -55,8 +55,14 @@ function placeEgg() {
     egg.classList.add('egg');
     document.body.appendChild(egg);
 
-    const randomX = Math.random() * window.innerWidth;
-    const randomY = Math.random() * window.innerHeight;
+    const eggWidth = 30; // Width of the egg
+    const eggHeight = 30; // Height of the egg
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    // Ensure the egg spawns within the visible area of the screen
+    const randomX = Math.random() * (windowWidth - eggWidth);
+    const randomY = Math.random() * (windowHeight - eggHeight);
 
     egg.style.left = `${randomX}px`;
     egg.style.top = `${randomY}px`;
