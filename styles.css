@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shantell Sans', sans-serif;
     overflow: hidden; /* Prevent scrolling when modal is open */
 }
 .container {
@@ -51,7 +51,7 @@ body {
     cursor: pointer;
     border-radius: 12px;
     transition: background-color 0.3s ease;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shantell Sans', sans-serif;
     font-weight: bold;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .instructions {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shantell Sans', sans-serif;
     color: #fff;
     max-width: 380px;
     margin-top: 20px;
