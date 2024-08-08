@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setTimeout(() => {
                 rainDrop.remove();
-            }, 5000); // Remove rain drop after 5 seconds
+            }, 9000); // Remove rain drop after 9 seconds
         }
     }
 
@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
         createRain();
         rainSound.currentTime = 0; // Reset the sound to the beginning
         rainSound.play();
+        rainSound.volume = 0.7;
 
         setTimeout(() => {
             rainSound.pause();
         }, 9000); // Stop sound after 9 seconds
     }
 
-    // Start the rain effect every 30 seconds
+    // Start the rain effect every 60 seconds
     startRain();
-    setInterval(startRain, 30000);
+    setInterval(startRain, 60000);
 });
