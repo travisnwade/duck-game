@@ -133,19 +133,6 @@ body, html {
     cursor: pointer;
 }
 
-.info-icon {
-    /* width: 20px; */
-    /* height: 20px; */
-    /* margin-left: 10px; */
-    display: none; /* Hiding for now until it's more useful */
-}
-
-.github-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-}
-
 .bird {
     position: absolute;
     width: 80px;
@@ -159,10 +146,6 @@ body, html {
 @media (max-width: 768px) {
     .mini-duck {
         display: none;
-    }
-    
-    .github-icon {
-        display: none; /* github icon */ 
     }
 }
 
@@ -192,10 +175,11 @@ body, html {
 .menu-content {
     max-width: 500px;
     width: 90%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with 80% opacity */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    color: #fff; /* White font color */
 }
 
 .menu-content ul {
