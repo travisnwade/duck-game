@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const rainContainer = document.getElementById('rainContainer');
     const rainSound = document.getElementById('rainSound');
+    rainSound.volume = 0.7;
     
     function createRain() {
         for (let i = 0; i < 100; i++) {
