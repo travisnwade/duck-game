@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuIcon.addEventListener('click', function() {
         if (menuOpen) {
-            menu.style.display = 'none';
+            menu.classList.remove('open');
             menuIcon.src = 'assets/menu-open.png';
         } else {
-            menu.style.display = 'flex';
+            menu.classList.add('open');
             menuIcon.src = 'assets/menu-close.png';
         }
         menuOpen = !menuOpen;

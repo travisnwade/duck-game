@@ -103,7 +103,6 @@ body {
 }
 
 .menu {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -113,6 +112,9 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
 }
 
 .menu-content {
@@ -140,4 +142,10 @@ body {
     .menu-content li {
         font-size: 18px;
     }
+}
+
+/* Open menu state */
+.menu.open {
+    visibility: visible;
+    opacity: 1;
 }
