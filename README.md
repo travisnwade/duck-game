@@ -1,8 +1,16 @@
-# Duck Game
+
 
 ![Duck Game](assets/duck.svg "Duck Game")
 
-Welcome to the **Duck Game** project! This is a fun and interactive webpage where a little ducky follows your mouse, mini ducks wander around, and a bird occasionally flies across the screen. The project is hosted [here](https://duck.twade.io/).
+# Duck Game
+
+Welcome to my stupid little **Duck Game** project.  This project was mostly for me to hone some more skills with javascript, and it actually ended up being a ton of fun. As I let friends give a try, I got lots of suggestions. Which only means I can keep learning and making fun stuff.
+
+This is a fun and interactive webpage where a little ducky follows your mouse, mini ducks wander around, and a bird occasionally flies across the screen. The project is hosted [here](https://duck.twade.io/).
+
+I host this on Netlify, which automatically detects source control changes and publishes them to a CDN. Pretty fantastic.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dfb9354d-d51d-4516-ab07-2bad51384f8e/deploy-status)](https://app.netlify.com/sites/twadeio-duck/deploys)
 
 ## Table of Contents
 - [Features](#features)
@@ -24,7 +32,7 @@ Welcome to the **Duck Game** project! This is a fun and interactive webpage wher
 You can see the Duck Game project in action [here](https://duck.twade.io/).
 
 ## Installation
-To run this project locally, follow these steps:
+If you want to mess with things a bit on your own and play a bit.
 
 1. **Clone the repository**:
     ```bash
@@ -36,7 +44,7 @@ To run this project locally, follow these steps:
     cd duck-game
     ```
 
-3. **Open `index.html` in your preferred web browser**.
+3. **Deploy to Netlify or your favorite hosting provider**
 
 ## Usage
 Once the project is running, you can interact with the duck that follows your mouse cursor. Mini ducks will also follow the main duck and wander around randomly. Collect the eggs by moving your cursor over them to increase the egg count. Enjoy the bird flying across the screen with accompanying sound effects and background music.
