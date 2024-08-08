@@ -126,6 +126,7 @@ body {
     border-radius: 10px;
     text-align: center;
     color: #fff; /* White font color */
+    font-family: 'Shantell Sans', sans-serif; /* Apply Shantell Sans to menu items */
 }
 
 .menu-content ul {
