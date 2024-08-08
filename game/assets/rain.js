@@ -20,14 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         createRain();
         rainSound.currentTime = 0; // Reset the sound to the beginning
         rainSound.play();
-        rainSound.volume = 0.7;
 
         setTimeout(() => {
             rainSound.pause();
         }, 9000); // Stop sound after 9 seconds
     }
 
-    // Start the rain effect every 60 seconds
-    startRain();
-    setInterval(startRain, 60000);
+    // Start the rain effect every 30 seconds, with an initial delay of 30 seconds
+    setTimeout(() => {
+        startRain();
+        setInterval(startRain, 60000);
+    }, 60000);
 });
