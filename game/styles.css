@@ -23,6 +23,8 @@ body, html {
     top: 10px;
     left: 20px;
     font-family: 'Shantell Sans', sans-serif;
+    display: none; /* Hide counters initially */
+    cursor: pointer;
     /* font-weight: 800;  */
 }
 
