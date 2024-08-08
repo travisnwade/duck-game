@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeMenu() {
         menu.classList.remove('open');
         menuIcon.src = 'assets/menu-open.png';
-        body.style.cursor = 'none'; // Hide cursor when menu is closed
+        body.style.cursor = 'auto'; // Hide cursor when menu is closed
         menuOpen = false;
     }
 });
