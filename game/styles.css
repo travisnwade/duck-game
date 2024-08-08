@@ -169,7 +169,7 @@ body, html {
 .menu-icon {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -206,15 +206,6 @@ body, html {
 .menu-content li {
     margin: 15px 0;
     font-size: 24px;
-}
-
-.menu-close-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 }
 
 /* Responsive adjustments */
