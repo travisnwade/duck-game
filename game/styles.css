@@ -211,25 +211,23 @@ body, html {
 }
 
 /* Share Ducks Section */
-.share-ducks {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-family: 'Shantell Sans', sans-serif;
-    font-size: 24px;
-    color: #fff;
-}
-
-.share-ducks span {
-    margin-right: 10px;
-}
-
 .share-icon {
-    margin: 0 10px;
-    color: #fff;
+    margin: 5px 10px;
+    color: #FFB648;
     text-decoration: none;
 }
 
 .share-icon i {
     font-size: 24px;
+}
+
+a,
+.menu-content li {
+    text-decoration: none;
+    color: #FFB648;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #c27c13;
 }
