@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function openMenu() {
         menu.classList.add('open');
-        menuIcon.src = 'assets/menu-close.png';
+        menuIcon.src = 'assets/images/menu-close.png';
         body.style.cursor = 'auto'; // Ensure normal cursor when menu is open
         menuOpen = true;
     }
 
     function closeMenu() {
         menu.classList.remove('open');
-        menuIcon.src = 'assets/menu-open.png';
+        menuIcon.src = 'assets/images/menu-open.png';
         body.style.cursor = 'auto'; // Ensure normal cursor when menu is closed
         menuOpen = false;
     }

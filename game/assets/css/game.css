@@ -2,3 +2,12 @@ body, html {
     background: url('/assets/images/duck-bg.jpg') no-repeat center center fixed;
     cursor: none; /* Hide the default cursor */
 }
+
+.counters {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
