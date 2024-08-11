@@ -1,3 +1,4 @@
 body, html {
+    background: url('/assets/images/duck-bg.jpg') no-repeat center center fixed;
     cursor: none; /* Hide the default cursor */
 }
