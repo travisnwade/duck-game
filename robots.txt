@@ -14,3 +14,5 @@ User-agent: yeti
 Disallow: /
 User-agent: *
 Disallow: 
+
+Sitemap: https://duck.twade.io/sitemap.xml
