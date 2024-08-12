@@ -1,6 +1,6 @@
 
 
-![Duck Game](assets/images/duck.svg "Duck Game")
+![Duck Game](assets/images/duck-og-bg.jpg "Duck Game")
 
 # Duck Game
 
