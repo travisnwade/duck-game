@@ -55,6 +55,7 @@ body, html {
     border-radius: 12px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    font-family: 'Shantell Sans';
 }
 
 .button:hover {
